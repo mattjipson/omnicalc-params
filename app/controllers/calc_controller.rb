@@ -9,4 +9,13 @@ class CalcController < ApplicationController
         
         render ("calc_templates/flexible_square.html.erb")
     end
+    
+    def flex_root
+        
+        @users_num = params.fetch("the_users_num").to_f
+        @the_root = @users_num ** 0.5
+        
+        render ("calc_templates/flexible_square_root.html.erb")
+    end
+    
 end
